@@ -42,7 +42,9 @@ public class OAdapter extends FirebaseRecyclerAdapter<Offer,OHolder>  {
         viewHolder.mName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent( );
+                Intent intent = new Intent(context,CompanyActivity.class);
+                intent.putExtra("company_name",new_offer.getName());
+                context.startActivity(intent);
             }
         });
         viewHolder.liketxt.setText(model.getLike().toString());

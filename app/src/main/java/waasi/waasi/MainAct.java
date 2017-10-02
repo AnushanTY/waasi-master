@@ -78,8 +78,6 @@ public class MainAct extends AppCompatActivity {
                     Log.d("get me profile", profile.getFirstName());
                     Intent myIntent = new Intent(MainAct.this, MainActivity.class);
                     myIntent.putExtra("bitmap", loginResult.getAccessToken().getUserId());
-                    String x = "Anushan";
-                    myIntent.putExtra("name", x);
                     startActivityForResult(myIntent, 200);
                     finish();
                 }

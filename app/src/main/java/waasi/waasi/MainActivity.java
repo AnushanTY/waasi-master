@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
-        View hView  = navigationView.getHeaderView(0);
+        /*View hView  = navigationView.getHeaderView(0);
         pro = (ProfilePictureView)hView.findViewById(R.id.imageView);
         TextView tv = (TextView)hView.findViewById(R.id.txtName);
 
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity
         String name = getIntent().getExtras().getString("name");
         pro.setProfileId(path);
         tv.setText(name);
-
+*/
 
     }
 
