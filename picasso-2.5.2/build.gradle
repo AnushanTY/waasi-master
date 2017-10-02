@@ -1,0 +1,5 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('picasso-2.5.2.jar'))
+dependencies {
+     compile 'com.squareup.picasso:picasso:2.4.2'
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+
+            android:title="Saved promos" />
+        <item
+            android:id="@+id/nav_gallery"
+
+            android:title="Interests" />
+        <item
+            android:id="@+id/nav_slideshow"
+
+            android:title="Edit profile" />
+        <item
+            android:id="@+id/nav_manage"
+
+            android:title="Invite friends" />
+    <item
+        android:id="@+id/nav_brod"
+        android:title="We broadcasts"/>
+    <item
+        android:id="@+id/nav_brod_off"
+        android:title="Broadcast your offers"/>
+    <item
+        android:id="@+id/nav_contact"
+        android:title="contact waasi"/>
+        <item
+            android:id="@+id/logout"
+            android:title="Loout"/>
+
+</group>
+
+
+</menu>
