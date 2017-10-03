@@ -51,32 +51,35 @@
             <TextView
                 android:id="@+id/interested"
                 android:layout_width="109dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.19"
+                android:layout_height="33dp"
                 android:fontFamily="sans-serif"
                 android:text="Interested"
+                android:textAlignment="center"
                 android:textColor="@color/like"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/today"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1.05"
                 android:text="Today"
                 android:textAlignment="center"
                 android:textColor="@color/app"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/offer_cal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.69"
-                android:text="Offer calendar"
-                android:textAlignment="textEnd"
+                android:layout_height="match_parent"
+                android:layout_weight="0.32"
+                android:text="Offer Calendar"
+                android:textAlignment="center"
                 android:textColor="@color/app"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
 
