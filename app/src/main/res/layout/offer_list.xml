@@ -109,7 +109,7 @@
                     android:id="@+id/mShare"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight="1.32"
+                    android:layout_weight="1.19"
                     android:background="@color/cardview_light_background"
 
                     app:srcCompat="@drawable/share" />
