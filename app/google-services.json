@@ -1,79 +1,27 @@
 {
   "project_info": {
-    "project_number": "314813469195",
-    "firebase_url": "https://waasi-5ce4f.firebaseio.com",
-    "project_id": "waasi-5ce4f",
-    "storage_bucket": "waasi-5ce4f.appspot.com"
+    "project_number": "583626039887",
+    "firebase_url": "https://waasi-607cf.firebaseio.com",
+    "project_id": "waasi-607cf",
+    "storage_bucket": "waasi-607cf.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:314813469195:android:0a5f811aa1ef6799",
-        "android_client_info": {
-          "package_name": "chrustkiran.com.myapplication"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "314813469195-97252eiqi67gbf9e985v57shvl75reli.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "chrustkiran.com.myapplication",
-            "certificate_hash": "8d27d216fc97ec3ecdbbff5d258bcf93b3237551"
-          }
-        },
-        {
-          "client_id": "314813469195-uhj66usus3485cuejh5i5rg594ma3450.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBMcPI0C03PbGLPQQ42RVpIIK8xuA76AFc"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "314813469195-uhj66usus3485cuejh5i5rg594ma3450.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:314813469195:android:db3dd165d194f1f0",
+        "mobilesdk_app_id": "1:583626039887:android:db3dd165d194f1f0",
         "android_client_info": {
           "package_name": "waasi.waasi"
         }
       },
       "oauth_client": [
         {
-          "client_id": "314813469195-iv9u12mot14c4aqvl9ip9qpn222u2nja.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "waasi.waasi",
-            "certificate_hash": "8d27d216fc97ec3ecdbbff5d258bcf93b3237551"
-          }
-        },
-        {
-          "client_id": "314813469195-uhj66usus3485cuejh5i5rg594ma3450.apps.googleusercontent.com",
+          "client_id": "583626039887-ihlqtsspl9pf8oisfq6b1ae1jj9j4tfl.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBMcPI0C03PbGLPQQ42RVpIIK8xuA76AFc"
+          "current_key": "AIzaSyAVzFIdbpAvALCad4yEqO_6nm2BQSv81t0"
         }
       ],
       "services": {
@@ -81,13 +29,8 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "314813469195-uhj66usus3485cuejh5i5rg594ma3450.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "status": 1,
+          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2

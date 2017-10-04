@@ -51,10 +51,11 @@ public class OfferFragment extends Fragment {
         rv.setHasFixedSize(true);
         mDataset = new ArrayList<>();
         rv.setLayoutManager(layoutManager);
-        mData = FirebaseDatabase.getInstance().getReference().child("offes");
+        mData = FirebaseDatabase.getInstance().getReference().child("offers");
         oAdapter = new OAdapter(Offer.class,R.layout.offer_list,OHolder.class,mData,getContext());
         rv.setAdapter(oAdapter);
         return super.onCreateView(inflater, container, savedInstanceState);
+        //cha
     }
 
 

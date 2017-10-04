@@ -3,8 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/picasso-2.5.2.1.1/picasso-2.5.2.1.1.iml" filepath="$PROJECT_DIR$/picasso-2.5.2.1.1/picasso-2.5.2.1.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/picasso-2.5.2.1.1/picasso-2.5.2.1.1.iml" filepath="$PROJECT_DIR$/picasso-2.5.2.1.1/picasso-2.5.2.1.1.iml" />
       <module fileurl="file://$PROJECT_DIR$/waasi.iml" filepath="$PROJECT_DIR$/waasi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/waasi-master.iml" filepath="$PROJECT_DIR$/waasi-master.iml" />
       <module fileurl="file://$PROJECT_DIR$/waasi-master.iml" filepath="$PROJECT_DIR$/waasi-master.iml" />
     </modules>
   </component>
