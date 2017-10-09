@@ -24,16 +24,22 @@
             android:name=".MainActivity">
 
         </activity>
-        <activity android:name=".MainAct">
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".MainAct">
 
         </activity>
         <activity android:name=".ResetPasswordActivity">
 
         </activity>
-        <activity android:name=".SignUp">
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".SignUp">
 
         </activity>
-        <activity android:name=".CompanyActivity">
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name=".CompanyActivity">
 
         </activity>
     </application>
