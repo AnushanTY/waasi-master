@@ -203,7 +203,7 @@
                     android:id="@+id/tlUserProfileTabs"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
-                    android:background="@color/colorAccent"
+                    android:background="@color/app"
                     app:tabGravity="fill"
                     app:tabIndicatorColor="#5be5ad"
                     app:tabIndicatorHeight="4dp"

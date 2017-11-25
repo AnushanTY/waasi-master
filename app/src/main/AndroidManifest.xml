@@ -12,7 +12,7 @@
         <activity
             android:name=".LoginActivity"
             android:label="waasi"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/no_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -14,8 +14,9 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
-        <ImageButton
+        <Button
             android:id="@+id/imageButton"
+            android:text="Unlock Special Offers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
@@ -23,8 +24,8 @@
             android:layout_alignParentTop="true"
             android:layout_margin="0dp"
             android:layout_weight="0"
-            android:background="@color/like"
-            app:srcCompat="@drawable/special" />
+            android:background="@color/app"
+             />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv"
@@ -52,10 +53,9 @@
                 android:id="@+id/interested"
                 android:layout_width="109dp"
                 android:layout_height="33dp"
-                android:fontFamily="sans-serif"
                 android:text="Interested"
                 android:textAlignment="center"
-                android:textColor="@color/like"
+                android:textColor="@color/app"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_weight="0.08" />
@@ -64,7 +64,7 @@
                 android:id="@+id/today"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="1.05"
+                android:layout_weight="0.49"
                 android:text="Today"
                 android:textAlignment="center"
                 android:textColor="@color/app"
@@ -75,12 +75,12 @@
                 android:id="@+id/offer_cal"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="0.32"
                 android:text="Offer Calendar"
                 android:textAlignment="center"
                 android:textColor="@color/app"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_weight="0.14" />
         </LinearLayout>
     </LinearLayout>
 

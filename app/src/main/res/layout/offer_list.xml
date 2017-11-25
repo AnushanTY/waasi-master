@@ -44,8 +44,11 @@
                         android:id="@+id/imageButton7"
                         android:layout_width="match_parent"
                         android:layout_height="36dp"
-                        android:background="@color/cardview_light_background"
-                        app:srcCompat="@drawable/inte" />
+
+                    android:background="@color/cardview_light_background"
+                        app:srcCompat="@drawable/ic_add_black_24dp"
+
+                    />
                 </LinearLayout>
 
                 <TextView
@@ -102,25 +105,31 @@
                     android:layout_width="51dp"
                     android:layout_height="56dp"
                     android:layout_weight="0.75"
-                    android:background="@color/cardview_shadow_end_color"
-                    app:srcCompat="@drawable/heart" />
 
-                <ImageButton
+                    android:background="@color/cardview_shadow_end_color"
+                    app:srcCompat="@drawable/ic_favorite_black_24dp"
+                />
+
+                <Button
                     android:id="@+id/mShare"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1.19"
+
                     android:background="@color/cardview_light_background"
 
-                    app:srcCompat="@drawable/share" />
+                    app:srcCompat="@drawable/share"
+                    />
 
-                <ImageButton
+                <Button
                     android:id="@+id/imageButton6"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1.00"
+
                     android:background="@color/cardview_light_background"
-                    app:srcCompat="@drawable/pin" />
+                    app:srcCompat="@drawable/pin"
+                    />
 
             </LinearLayout>
 
