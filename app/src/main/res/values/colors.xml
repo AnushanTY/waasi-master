@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#fc050505</color>
-    <color name="colorPrimaryDark">#fef22636</color>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#F44336</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="offer">#fcffffff</color>
+    <color name="offer">#ffffff</color>
     <color name="like">#26933e</color>
-    <color name="app">#fef22636</color>
+    <color name="app">#F44336</color>
     <color name="btn_send_normal">#02c754</color>
     <color name="btn_send_pressed">#006633</color>
 </resources>

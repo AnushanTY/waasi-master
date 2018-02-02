@@ -5,7 +5,7 @@
         <item
             android:id="@+id/nav_camera"
 
-            android:title="Saved promos" />
+            android:title="Add promos Det" />
         <item
             android:id="@+id/nav_gallery"
 
@@ -29,7 +29,7 @@
         android:title="contact waasi"/>
         <item
             android:id="@+id/logout"
-            android:title="Loout"/>
+            android:title="Logout"/>
 
 </group>
 

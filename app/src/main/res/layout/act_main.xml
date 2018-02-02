@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     >
 
 
@@ -10,13 +12,13 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="56dp"
+        android:paddingTop="10dp"
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
-        <ImageView android:src="@drawable/bell"
+        <ImageView android:src="@drawable/logo"
             android:layout_width="wrap_content"
-            android:layout_height="72dp"
+            android:layout_height="70dp"
             android:layout_marginBottom="24dp"
             android:layout_gravity="center_horizontal" />
 
@@ -29,6 +31,7 @@
             <EditText android:id="@+id/phonenumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="+94"
                 android:inputType="phone"
                 android:hint="Phone number" />
         </android.support.design.widget.TextInputLayout>
@@ -52,29 +55,38 @@
             android:orientation="vertical"
             android:weightSum="3.0">
 
-            <android.support.v7.widget.AppCompatButton
+
+
+            <Button
                 android:id="@+id/button_start_verification"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1.0"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/button_shape"
                 android:text="Start"
-                android:background="#76FF03" />
+                android:textColor="@android:color/black" />
 
-            <android.support.v7.widget.AppCompatButton
+            <Button
                 android:id="@+id/button_verify_phone"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1.0"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/button_shape"
                 android:text="Verify"
-                android:background="#FFEB3B" />
+                android:textColor="@android:color/black" />
 
-            <android.support.v7.widget.AppCompatButton
+
+            <!-- Link to Login Screen -->
+
+            <Button
                 android:id="@+id/button_resend"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1.0"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/button_shape"
                 android:text="Resend"
-                android:background="#18FFFF" />
+                android:textAllCaps="false"
+                android:textSize="15dp" />
         </LinearLayout>
 
 
@@ -83,8 +95,9 @@
         android:id="@+id/progressBar"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_gravity="center|bottom"
+        android:layout_gravity="center"
+        android:background="@drawable/progress"
         android:layout_marginBottom="20dp"
         android:visibility="gone" />
 
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

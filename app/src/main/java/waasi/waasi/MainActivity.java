@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity
     Fragment fragment = null;
 
     private ArrayList<Offer> mDataset;
-    
+
 
     private DatabaseReference mData;
     //public DataSnapshot dataSnapshot;
@@ -153,12 +153,13 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera){
-            fragment = new OfferFragment();
+            // fragment = new OfferFragment();
+            startActivity(new Intent(MainActivity.this, AddPromoDetail.class));
 
 
 
         } else if (id == R.id.nav_gallery) {
-           fragment = new OtherFragment();
+            fragment = new OtherFragment();
 
         } else if (id == R.id.nav_slideshow) {
 
@@ -168,7 +169,7 @@ public class MainActivity extends AppCompatActivity
         else if (id == R.id.logout) {
             finishAffinity();
             mAuth.signOut();
-            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            startActivity(new Intent(MainActivity.this, MainAct.class));
             finish();
 
         }

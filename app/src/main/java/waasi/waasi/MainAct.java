@@ -25,6 +25,12 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.concurrent.TimeUnit;
 
@@ -67,7 +73,7 @@ public class MainAct extends AppCompatActivity implements
             @Override
             public void onVerificationCompleted(PhoneAuthCredential credential) {
                 Log.d(TAG, "onVerificationCompleted:" + credential);
-               // signInWithPhoneAuthCredential(credential);
+
             }
 
             @Override
@@ -87,6 +93,7 @@ public class MainAct extends AppCompatActivity implements
                 Log.d(TAG, "onCodeSent:" + verificationId);
                 mVerificationId = verificationId;
                 mResendToken = token;
+                progressBar.setVisibility(View.GONE);
             }
         };
     }
@@ -98,7 +105,36 @@ public class MainAct extends AppCompatActivity implements
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Log.d(TAG, "signInWithCredential:success");
-                            finish();
+
+                            final String user =mAuth.getCurrentUser().getUid();
+                            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users");
+
+                            //DatabaseReference query = reference.child(user);
+
+                            reference.addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(DataSnapshot dataSnapshot) {
+                                    Log.w("msgggggggggg", String.valueOf(dataSnapshot.child(user)));
+                                    if (dataSnapshot.child(user).exists()) {
+
+
+                                        progressBar.setVisibility(View.VISIBLE);
+                                        Intent i =new Intent(MainAct.this, MainActivity.class);
+                                        startActivity(i);
+                                    }else{
+                                        progressBar.setVisibility(View.VISIBLE);
+                                        Intent I =new Intent(MainAct.this,SignUp.class);
+                                        startActivity(I);
+                                    }
+                                }
+
+                                @Override
+                                public void onCancelled(DatabaseError databaseError) {
+
+                                }
+                            });
+
+
                         } else {
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
                             if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
@@ -122,6 +158,9 @@ public class MainAct extends AppCompatActivity implements
     private void verifyPhoneNumberWithCode(String verificationId, String code) {
         PhoneAuthCredential credential = PhoneAuthProvider.getCredential(verificationId, code);
         signInWithPhoneAuthCredential(credential);
+
+
+
     }
 
     private void resendVerificationCode(String phoneNumber,
@@ -155,14 +194,19 @@ public class MainAct extends AppCompatActivity implements
 
     @Override
     public void onClick(View view) {
+
         switch (view.getId()) {
             case R.id.button_start_verification:
+                progressBar.setVisibility(View.VISIBLE);
                 if (!validatePhoneNumber()) {
                     return;
                 }
                 startPhoneNumberVerification(mPhoneNumberField.getText().toString());
+
+
                 break;
             case R.id.button_verify_phone:
+                progressBar.setVisibility(View.VISIBLE);
                 String code = mVerificationField.getText().toString();
                 if (TextUtils.isEmpty(code)) {
                     mVerificationField.setError("Cannot be empty.");
@@ -170,35 +214,37 @@ public class MainAct extends AppCompatActivity implements
                 }
 
                 verifyPhoneNumberWithCode(mVerificationId, code);
-                progressBar.setVisibility(View.VISIBLE);
-                Bundle b = getIntent().getExtras();
-                String email= b.getString("Username");
-                String password= b.getString("Password");
 
-                mAuth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(MainAct.this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                Toast.makeText(MainAct.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
-
-                                progressBar.setVisibility(View.GONE);
-                                // If sign in fails, display a message to the user. If sign in succeeds
-                                // the auth state listener will be notified and logic to handle the
-                                // signed in user can be handled in the listener.
-                                if (!task.isSuccessful()) {
-                                    Toast.makeText(MainAct.this, "Authentication failed." + task.getException(),
-                                            Toast.LENGTH_SHORT).show();
-                                } else {
-                                    startActivity(new Intent(MainAct.this, LoginActivity.class));
-                                    finish();
-                                }
-                            }
-                        });
+//                Bundle b = getIntent().getExtras();
+//                String email= b.getString("email");
+//                String password= b.getString("Password");
+//
+//                mAuth.createUserWithEmailAndPassword(email, password)
+//                        .addOnCompleteListener(MainAct.this, new OnCompleteListener<AuthResult>() {
+//                            @Override
+//                            public void onComplete(@NonNull Task<AuthResult> task) {
+//                                Toast.makeText(MainAct.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
+//
+//                                progressBar.setVisibility(View.GONE);
+//                                // If sign in fails, display a message to the user. If sign in succeeds
+//                                // the auth state listener will be notified and logic to handle the
+//                                // signed in user can be handled in the listener.
+//                                if (!task.isSuccessful()) {
+//                                    Toast.makeText(MainAct.this, "Authentication failed." + task.getException(),
+//                                            Toast.LENGTH_SHORT).show();
+//                                } else {
+//                                    startActivity(new Intent(MainAct.this, LoginActivity.class));
+//                                    finish();
+//                                }
+//                            }
+//                        });
 
 
                 break;
             case R.id.button_resend:
+
                 resendVerificationCode(mPhoneNumberField.getText().toString(), mResendToken);
+
                 break;
         }
 
